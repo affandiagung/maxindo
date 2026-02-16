@@ -1,0 +1,186 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               8.0.30-0ubuntu0.20.04.2 - (Ubuntu)
+-- Server OS:                    Linux
+-- HeidiSQL Version:             11.2.0.6213
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+-- Dumping structure for table maxindo.menuprivileges
+CREATE TABLE IF NOT EXISTS `menuprivileges` (
+  `MENUPRIVILEGEID` int NOT NULL AUTO_INCREMENT,
+  `PRIVILEGE` varchar(25) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `TITLE` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `MENU` int DEFAULT NULL,
+  `ICON` int DEFAULT NULL,
+  `MENULEVEL` int DEFAULT NULL,
+  `PARENTMENU` int DEFAULT NULL,
+  `ORDERSEQ` int DEFAULT NULL,
+  PRIMARY KEY (`MENUPRIVILEGEID`),
+  KEY `PRIVILEGE` (`PRIVILEGE`)
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table maxindo.menuprivileges: ~73 rows (approximately)
+DELETE FROM `menuprivileges`;
+/*!40000 ALTER TABLE `menuprivileges` DISABLE KEYS */;
+INSERT INTO `menuprivileges` (`MENUPRIVILEGEID`, `PRIVILEGE`, `TITLE`, `MENU`, `ICON`, `MENULEVEL`, `PARENTMENU`, `ORDERSEQ`) VALUES
+  (1, 'ADM', NULL, 1, NULL, NULL, 0, 1),
+  (2, 'ADM', NULL, 8, NULL, NULL, 0, 9),
+  (3, 'ADM', NULL, 2, NULL, NULL, 0, 10),
+  (4, 'ADM', NULL, 3, NULL, NULL, 2, 1),
+  (5, 'ADM', NULL, 4, NULL, NULL, 2, 2),
+  (6, 'ADM', NULL, 5, NULL, NULL, 2, 3),
+  (7, 'ADM', NULL, 6, NULL, NULL, 2, 4),
+  (28, 'ADM', NULL, 28, NULL, NULL, 62, 1),
+  (29, 'ADM', NULL, 35, NULL, NULL, 59, 1),
+  (30, 'ADM', NULL, 34, NULL, NULL, 8, 10),
+  (31, 'ADM', NULL, 27, NULL, NULL, 59, 2),
+  (32, 'ADM', NULL, 33, NULL, NULL, 0, 4),
+  (36, 'ADM', NULL, 44, NULL, NULL, 8, 6),
+  (37, 'ADM', NULL, 43, NULL, NULL, 8, 7),
+  (38, 'ADM', NULL, 45, NULL, NULL, 8, 10),
+  (39, 'ADM', NULL, 46, NULL, NULL, 45, 1),
+  (40, 'ADM', NULL, 47, NULL, NULL, 45, 2),
+  (41, 'ADM', NULL, 48, NULL, NULL, 45, 3),
+  (44, 'ADM', NULL, 30, NULL, NULL, 59, 1),
+  (45, 'ADM', NULL, 54, NULL, NULL, 63, 1),
+  (47, 'ADM', NULL, 56, NULL, NULL, 28, 1),
+  (48, 'ADM', NULL, 57, NULL, NULL, 28, 2),
+  (49, 'ADM', NULL, 55, NULL, NULL, 28, 3),
+  (50, 'ADM', NULL, 59, NULL, NULL, 8, 2),
+  (51, 'ADM', NULL, 58, NULL, NULL, 63, 2),
+  (52, 'ADM', NULL, 60, NULL, NULL, 2, 5),
+  (54, 'ADM', NULL, 63, NULL, NULL, 8, 2),
+  (55, 'ADM', NULL, 64, NULL, NULL, 8, 2),
+  (56, 'ADM', NULL, 65, NULL, NULL, 64, 1),
+  (57, 'ADM', NULL, 62, NULL, NULL, 0, 4),
+  (58, 'ADM', NULL, 67, NULL, NULL, 62, 1),
+  (59, 'ADM', NULL, 68, NULL, NULL, 67, 1),
+  (60, 'ADM', NULL, 69, NULL, NULL, 67, 2),
+  (61, 'ADM', NULL, 70, NULL, NULL, 62, 2),
+  (62, 'ADM', NULL, 71, NULL, NULL, 64, 2),
+  (63, 'CUS', NULL, 1, NULL, NULL, 0, 1),
+  (64, 'CUS', NULL, 31, NULL, NULL, 0, 2),
+  (65, 'CUS', NULL, 72, NULL, NULL, 0, 3),
+  (66, 'ADM', NULL, 73, NULL, NULL, 8, 10),
+  (67, 'ADM', NULL, 74, NULL, NULL, 73, 1),
+  (68, 'ADM', NULL, 75, NULL, NULL, 73, 2),
+  (69, 'ADM', NULL, 76, NULL, NULL, 59, 4),
+  (70, 'ADM', NULL, 77, NULL, NULL, 63, 3),
+  (71, 'ADM', NULL, 78, NULL, NULL, 73, 3),
+  (73, 'EMP', NULL, 1, NULL, NULL, 0, 0),
+  (74, 'EMP', NULL, 31, NULL, NULL, 0, 1),
+  (75, 'MRK', NULL, 1, NULL, NULL, 0, 0),
+  (79, 'GDG', NULL, 1, NULL, NULL, 0, 0),
+  (80, 'GDG', NULL, 62, NULL, NULL, 0, 1),
+  (81, 'GDG', NULL, 28, NULL, NULL, 62, 1),
+  (82, 'GDG', NULL, 67, NULL, NULL, 62, 2),
+  (83, 'GDG', NULL, 70, NULL, NULL, 62, 3),
+  (84, 'GDG', NULL, 56, NULL, NULL, 28, 1),
+  (85, 'GDG', NULL, 57, NULL, NULL, 28, 2),
+  (86, 'GDG', NULL, 55, NULL, NULL, 28, 3),
+  (87, 'GDG', NULL, 68, NULL, NULL, 67, 1),
+  (88, 'GDG', NULL, 69, NULL, NULL, 67, 2),
+  (89, 'OPR', NULL, 1, NULL, NULL, 0, 0),
+  (91, 'OPR', NULL, 31, NULL, NULL, 0, 1),
+  (92, 'ADM', NULL, 80, NULL, NULL, 0, 0),
+  (93, 'ADM', NULL, 81, NULL, NULL, 0, 8),
+  (94, 'ADM', NULL, 82, NULL, NULL, 81, 1),
+  (95, 'ADM', NULL, 83, NULL, NULL, 81, 2),
+  (96, 'MRK', NULL, 31, NULL, NULL, 0, 2),
+  (97, 'ADM', NULL, 84, NULL, NULL, 64, 3),
+  (98, 'ADM', NULL, 31, NULL, NULL, 0, 2),
+  (99, 'GDG', NULL, 31, NULL, NULL, 0, 4),
+  (100, 'GDG', NULL, 81, NULL, NULL, 0, 3),
+  (101, 'GDG', NULL, 82, NULL, NULL, 81, 1),
+  (102, 'MM', NULL, 1, NULL, NULL, 0, 0),
+  (103, 'MM', NULL, 31, NULL, NULL, 0, 0),
+  (104, 'ADM', NULL, 85, NULL, NULL, 73, 5),
+  (105, 'ADM', NULL, 86, NULL, NULL, 73, 4);
+/*!40000 ALTER TABLE `menuprivileges` ENABLE KEYS */;
+
+-- Dumping structure for table maxindo.menus
+CREATE TABLE IF NOT EXISTS `menus` (
+  `MENUID` int NOT NULL AUTO_INCREMENT,
+  `NAME` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ICON` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `URL` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `NEWTAB` int NOT NULL DEFAULT '0',
+  PRIMARY KEY (`MENUID`)
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table maxindo.menus: ~59 rows (approximately)
+DELETE FROM `menus`;
+/*!40000 ALTER TABLE `menus` DISABLE KEYS */;
+INSERT INTO `menus` (`MENUID`, `NAME`, `ICON`, `URL`, `NEWTAB`) VALUES
+  (1, 'Dashboard', 'fa fa-signal text-warning', 'dashboard', 0),
+  (2, 'Konfigurasi App', 'fa fa-cog text-danger', '#', 0),
+  (3, 'Konfigurasi', 'la la-gear', 'configuration', 0),
+  (4, 'User', 'la la-user', 'user', 0),
+  (5, 'Menu Item', 'la la-list', 'menuitem', 0),
+  (6, 'Hak Akses', 'la la-th', 'privilege', 0),
+  (7, 'User Profile', 'la la-user', 'userprofile', 0),
+  (8, 'Data Master', 'la la-th text-white', '#', 0),
+  (27, 'Jabatan', '', 'jobposition', 0),
+  (28, 'Inventori', '', '#', 0),
+  (29, 'Target', '', 'target', 0),
+  (30, 'Unit / DIvisi', '', 'unit', 0),
+  (31, 'Proyek', 'fas fa-project-diagram', 'project', 0),
+  (33, 'Customer', 'fa fa-users text-primary', 'customer', 0),
+  (34, 'Pertanyaan Survey', '', 'question', 0),
+  (35, 'Staff/Pegawai', '', 'employee', 0),
+  (36, 'Marketing', 'fa fa-phone text-info', '#', 0),
+  (43, 'Metode Pembayaran', '', 'paymentmethod', 0),
+  (44, 'Jenis Aktifitas', '', 'activitytype', 0),
+  (45, 'Wilayah', '', '#', 0),
+  (46, 'Provinsi', '', 'province', 0),
+  (47, 'Kota', '', 'city', 0),
+  (48, 'Kecamatan', '', 'district', 0),
+  (49, 'Marketing Lead', '', 'marketing_lead', 0),
+  (50, 'Laporan', '', '#', 0),
+  (51, 'Marketing Target', '', 'marketing_target', 0),
+  (52, 'Marketing Canvassing', '', 'marketing_canvassing', 0),
+  (54, 'Vendor', '', 'vendor', 0),
+  (55, 'Paket Inventory', '', 'inventorypackage', 0),
+  (56, 'Data Inventory', '', 'inventory', 0),
+  (57, 'Kondisi Inventory', '', 'inventorycondition', 0),
+  (58, 'Supplier', '', 'supplier', 0),
+  (59, 'Kepegawaian', '', '#', 0),
+  (60, 'Database', '', 'database', 0),
+  (61, 'Operasional', 'fa fa-exchange-alt text-white', '#', 0),
+  (62, 'Gudang', 'fa fa-warehouse text-info', '#', 0),
+  (63, 'Vendor & Suplier', '', '#', 0),
+  (64, 'Master Proyek', '', '#', 0),
+  (65, 'Template Proyek', '', 'projecttype', 0),
+  (67, 'Transaksi Barang', '', '#', 0),
+  (68, 'Barang Keluar / Disewa', '', 'inventory_out', 0),
+  (69, 'Barang Masuk / Kembali', '', 'inventory_in', 0),
+  (70, 'Stock Opname', '', 'stockopname', 0),
+  (71, 'Tahapan Proyek', '', 'projectstage', 0),
+  (72, 'Riwayat Order', 'fas fa-project-diagram', 'orderhistory', 0),
+  (73, 'Data Lain', '', 'other', 0),
+  (74, 'Jenis Customer', '', 'customertype', 0),
+  (75, 'Hubungan Kelurga', '', 'relation', 0),
+  (76, 'Status Karyawan', '', 'employeestatus', 0),
+  (77, 'Bidang Usaha', '', 'businessfield', 0),
+  (78, 'Jenis Acara', '', 'eventtype', 0),
+  (79, 'Penjadwalan', 'fa fa-calendar text-succe', 'penjadwalan', 0),
+  (80, 'Monitoring Dasboard', 'far fa-chart-bar text-success', 'monitoring', 0),
+  (81, 'Kalender', 'fa fa-calendar text-success', '#', 0),
+  (82, 'Kalender Inventory', '', 'inventory_calendar', 0),
+  (83, 'Kalender Personil', '', 'personil_calendar', 0),
+  (84, 'Jabatan Dalam Proyek', '', 'projectunit', 0),
+  (85, 'Kategori Inventory', '', 'inventorytype', 0),
+  (86, 'Jenis Satuan', '', 'unittype', 0);
+/*!40000 ALTER TABLE `menus` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
